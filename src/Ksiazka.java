@@ -19,4 +19,11 @@ public class Ksiazka {
     public void zwroc(){
         dostepna = true;
     }
+
+    public String getTytul() {
+        return tytul;
+    }
+    public boolean isDostepna() {
+        return dostepna;
+    }
 }

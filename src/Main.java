@@ -1,13 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-    Czytelnik czytelnik1 = new Czytelnik("Jan", "Kowalski", 12345, 0);
-    Czytelnik czytelnik2 = new Czytelnik("Anna", "Nowak", 54321, 2);
-    czytelnik2.wypiszDane();
-    czytelnik2.zmniejszLiczbeWypozyczen(1);
-    czytelnik2.wypiszDane();
-    czytelnik1.wypiszDane();
-    czytelnik1.zwiekszLiczbeWypozyczen(3);
-    czytelnik1.wypiszDane();
+    Biblioteka biblioteka = new Biblioteka(5);
 
+    Ksiazka ksiazka = new Ksiazka("Pan Tadeusz", "Adam Mickiewicz", 300, false);
+    Ksiazka ksiazka1 = new Ksiazka("Lalka", "Bolesław Prus", 400, true);
+    Ksiazka ksiazka2 = new Ksiazka("Zbrodnia i kara", "Fiodor Dostojewski", 500, false);
+    Ksiazka ksiazka3 = new Ksiazka("Mistrz i Małgorzata", "Michaił Bułhakow", 350, true);
+    Ksiazka ksiazka4 = new Ksiazka("Krzyżacy", "Henryk Sienkiewicz", 450, true);
+
+
+    biblioteka.dodajKsiazke(ksiazka);
+    biblioteka.dodajKsiazke(ksiazka1);
+    biblioteka.dodajKsiazke(ksiazka2);
+    biblioteka.dodajKsiazke(ksiazka3);
+    biblioteka.dodajKsiazke(ksiazka4);
+
+    Ksiazka szukanaKsiazka = biblioteka.znajdzKsiazkePoTytule("Zbrodnia i kara");
+    szukanaKsiazka.wypiszInfo();
+    System.out.println("-------------------------------------");
+    biblioteka.wypiszDostepneKsiazki();
+    System.out.println("\n\nDostepne ksiazki: " + biblioteka.policzDostepneKsiazki());
     }
 }

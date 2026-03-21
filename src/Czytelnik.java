@@ -23,11 +23,3 @@ public class Czytelnik {
         liczbaWypozyczen = liczbaWypozyczen - ile;
     }
 }
-
-
-//Rozbuduj projekt o klasę Czytelnik. Ma ona reprezentować użytkownika biblioteki i przechowywać
-//podstawowe informacje o stanie wypożyczeń.
-//• pola: imie, nazwisko, numerKarty, liczbaWypozyczen
-//• konstruktor ustawiający dane czytelnika
-//• metody: wypiszDane(), zwiekszLiczbeWypozyczen(), zmniejszLiczbeWypozyczen()
-//• w Main utwórz co najmniej dwóch czytelników i wywołaj ich metody
