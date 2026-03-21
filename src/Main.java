@@ -8,17 +8,18 @@ public class Main {
     Ksiazka ksiazka3 = new Ksiazka("Mistrz i Małgorzata", "Michaił Bułhakow", 350, true);
     Ksiazka ksiazka4 = new Ksiazka("Krzyżacy", "Henryk Sienkiewicz", 450, true);
 
-
     biblioteka.dodajKsiazke(ksiazka);
     biblioteka.dodajKsiazke(ksiazka1);
     biblioteka.dodajKsiazke(ksiazka2);
     biblioteka.dodajKsiazke(ksiazka3);
     biblioteka.dodajKsiazke(ksiazka4);
 
-    Ksiazka szukanaKsiazka = biblioteka.znajdzKsiazkePoTytule("Zbrodnia i kara");
-    szukanaKsiazka.wypiszInfo();
-    System.out.println("-------------------------------------");
     biblioteka.wypiszDostepneKsiazki();
-    System.out.println("\n\nDostepne ksiazki: " + biblioteka.policzDostepneKsiazki());
+    Czytelnik czytelnik = new Czytelnik("Jan", "Kowalski", 12345, 0);
+    biblioteka.wypozyczKsiazke("Lalka", czytelnik);
+    biblioteka.wypiszDostepneKsiazki();
+    biblioteka.zwrocKsiazke("Lalka", czytelnik);
+    biblioteka.wypiszDostepneKsiazki();
+
     }
 }
